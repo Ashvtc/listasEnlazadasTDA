@@ -7,12 +7,12 @@ struct lista{
 	
 void insertar( struct lista **Ini, int x){
 /* inserta x por el comienzo de la lista p */
-	struct lista *t = malloc(sizeof(struct lista));
+	lista *t = new struct lista;
 	t->valor = x;
 	t->prox = *Ini;
 	*Ini = t;
 }
-void mostrar ( struct lista *Ini){
+void mostrar ( lista *Ini){
 /* muestra por pantalla la lista enlazada */
 	struct lista *t = Ini;
 	while ( t){
@@ -20,14 +20,14 @@ void mostrar ( struct lista *Ini){
 	t= t->prox;};
 	printf("NULL\n\n");
 }
-void mostrarlst( struct lista *p, char c){
+void mostrarlst( lista *p, char c){
 /* imprime encabezado y llama a mostrar */
 	printf( "\n\n\tLista %c ->",c);
 	mostrar( p);
 }
 int main() {
 	int op = -1, x=0, n;
-	struct lista *A=NULL,*B=NULL;
+	lista *A=NULL,*B=NULL;
 	
 	while ( op ){
 		system("cls");
